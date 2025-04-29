@@ -9,11 +9,11 @@ class Model:
         self.system_prompt = system_prompt
         if type == "Llama":
             self.wrapper = "<|start_header_id|>user<|end_header_id|>\n\n%s<|eot_id|><|start_header_id|>assistant<|end_header_id|>"
-        elif type == "minstral":
+        elif type == "mistral":
             self.wrapper = "<|im_start|>user\n%s<|im_end|>\n<|im_start|>assistant\n"
         elif type == "mpt":
             self.wrapper = "### Instruction:\n%s\n\n### Response:"
-        elif type == "minstral_inst":
+        elif type == "mistral_inst":
             self.wrapper = "[INST] %s [/INST]"
         elif type == "phi":
             self.wrapper = "<|system|>%s<|end|><|user|>%s<|end|><|assistant|>"
